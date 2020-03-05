@@ -15,7 +15,7 @@ RUN sed -ri 's/^#?LogLevel INFO/LogLevel INFO/g' /etc/ssh/sshd_config
 RUN echo "Host github.com\n\tStrictHostKeyChecking no\n" >> /root/.ssh/config
 
 RUN mkdir /root/.ssh
-RUN touch /root/.ssh/authorized_keys
+COPY authorized_keys /root/.ssh/authorized_keys
 RUN chmod 600 /root/.ssh/authorized_keys
 
 EXPOSE 22
