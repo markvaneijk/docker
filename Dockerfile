@@ -2,7 +2,7 @@ FROM ubuntu:latest
 MAINTAINER Mark van Eijk <mark@vaneijk.co>
 
 RUN apt-get update
-RUN apt-get install -y openssh-server sed nano rsync
+RUN apt-get install -y openssh-server sed nano rsync sudo
 
 RUN mkdir /var/run/sshd
 
