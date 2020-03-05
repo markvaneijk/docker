@@ -6,12 +6,6 @@ RUN apt-get install -y openssh-server sed nano rsync
 
 RUN mkdir /var/run/sshd
 
-COPY baseSshKeys /etc/ssh
-RUN chmod 600 /etc/ssh/ssh_host_dsa_key
-RUN chmod 600 /etc/ssh/ssh_host_ecdsa_key
-RUN chmod 600 /etc/ssh/ssh_host_ed25519_key
-RUN chmod 600 /etc/ssh/ssh_host_rsa_key
-
 RUN echo "root:root" | chpasswd
 
 RUN sed -ri 's/^#?PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config
