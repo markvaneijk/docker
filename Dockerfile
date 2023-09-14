@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM arm64v8/ubuntu:22.04
 MAINTAINER Mark van Eijk <mark@vaneijk.co>
 
 RUN apt-get update
