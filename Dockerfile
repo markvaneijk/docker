@@ -2,7 +2,7 @@ FROM arm64v8/ubuntu:22.04
 MAINTAINER Mark van Eijk <m@rkvaneijk.nl>
 
 RUN apt-get update
-RUN apt-get install -y openssh-server sed nano rsync sudo
+RUN apt-get install -y openssh-server sed nano rsync sudo bc curl dnsmasq gawk gcc git jq libpcre3-dev libpng-dev locate lsb-releaze make ncdu npm pngquant sshpass ufw unzip wget zip
 
 RUN mkdir /var/run/sshd
 
