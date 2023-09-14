@@ -1,5 +1,5 @@
 FROM arm64v8/ubuntu:22.04
-MAINTAINER Mark van Eijk <mark@vaneijk.co>
+MAINTAINER Mark van Eijk <m@rkvaneijk.nl>
 
 RUN apt-get update
 RUN apt-get install -y openssh-server sed nano rsync sudo
